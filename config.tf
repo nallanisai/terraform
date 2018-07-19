@@ -3,6 +3,6 @@ terraform {
     bucket  = "terraformtest001"
     encrypt = "true"
     region  = "us-west-2"
-    key     = "tf-instance01/tf-instance01.tfstate"
+    key     = "tf-instance02/tf-instance02.tfstate"
   }
 }

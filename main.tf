@@ -5,9 +5,9 @@ provider "aws" {
 }
 
 resource "aws_security_group" "terraform_sg" {
-  name="terraform_sg"
+  name="terraform_sg02"
   tags {
-    Name = "terraform_sg"
+    Name = "terraform_sg02"
   }
   
   ingress {
@@ -29,7 +29,7 @@ resource "aws_instance" "terraform-centos" {
   vpc_security_group_ids = ["${aws_security_group.terraform_sg.id}"]
   key_name = "terraform-instance"
   tags {
-    Name = "tf-instance01"
+    Name = "tf-instance02"
   }
 
 }
