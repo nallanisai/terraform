@@ -16,8 +16,6 @@ pipeline {
   stages {
     stage('Loading AWS Credentials and running terraform plan') {
       steps {
-        ansiColor('xterm') {
-          echo "loading aws credentials"
           sh """
           set -x
           source /jenkins_workspace/aws_credentials.sh
