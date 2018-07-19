@@ -11,12 +11,12 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '10'))
     disableConcurrentBuilds()
+    ansiColor('xterm')
   }
 
   stages {
     stage('Loading AWS Credentials and running terraform plan') {
       steps {
-        ansiColor('xterm') {
           echo "colors"
           sh """
           set -x
@@ -24,7 +24,6 @@ pipeline {
           /usr/bin/terraform init 
           /usr/bin/terraform plan -out=create.tfplan
           """
-        }
       }
     }
   }
