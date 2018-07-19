@@ -16,12 +16,15 @@ pipeline {
   stages {
     stage('Loading AWS Credentials and running terraform plan') {
       steps {
+        ansiColor('xterm') {
+          echo "colors"
           sh """
           set -x
           source /jenkins_workspace/aws_credentials.sh
           /usr/bin/terraform init 
           /usr/bin/terraform plan -out=create.tfplan
           """
+        }
       }
     }
   }
