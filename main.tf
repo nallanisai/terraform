@@ -29,7 +29,7 @@ resource "aws_instance" "terraform-centos" {
   vpc_security_group_ids = ["${aws_security_group.terraform_sg.id}"]
   key_name = "terraform-instance"
   tags {
-    Name = "tf-instance"
+    Name = "tf-instance01"
   }
 
 }
