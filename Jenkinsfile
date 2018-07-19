@@ -2,9 +2,7 @@
 
 pipeline {
  
-  agent {
-   label 'Any'
-  }
+  agent any
   
   parameters {
     string(name: 'tf_version', description: 'Terraform version', defaultValue: '0.11.7')
