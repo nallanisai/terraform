@@ -22,7 +22,6 @@ pipeline {
           /usr/bin/terraform init 
           /usr/bin/terraform plan -out=create.tfplan
           """
-        }
       }
     }
   }
